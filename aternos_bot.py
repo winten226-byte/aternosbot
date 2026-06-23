@@ -8,17 +8,6 @@ Aternos Telegram Bot
     py -3.11 aternos_bot.py
 """
 import logging
-
-import sys, os, site
-
-# Фикс: python_aternos → aternos
-for sp in site.getsitepackages():
-    src = os.path.join(sp, 'python_aternos')
-    dst = os.path.join(sp, 'aternos')
-    if os.path.isdir(src) and not os.path.isdir(dst):
-        os.rename(src, dst)
-        break
-        
 from datetime import datetime, timedelta
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters

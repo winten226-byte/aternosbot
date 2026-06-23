@@ -68,11 +68,10 @@ def reply_keyboard():
 def _get_server():
     from python_aternos import Client
     atclient = Client.from_credentials(ATERNOS_LOGIN, ATERNOS_PASSWORD)
-    servers = atclient.account.list_servers()
+    servers = atclient.list_servers()
     if not servers:
         raise Exception("Серверы не найдены на аккаунте.")
     return servers[0]
-
 
 async def aternos_start() -> str:
     try:

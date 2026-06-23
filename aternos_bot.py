@@ -17,6 +17,16 @@ from telegram import ReplyKeyboardMarkup, KeyboardButton
 #  НАСТРОЙКИ
 # ============================================================
 
+import sys, os, site
+
+# Фикс: python_aternos → aternos
+for sp in site.getsitepackages():
+    src = os.path.join(sp, 'python_aternos')
+    dst = os.path.join(sp, 'aternos')
+    if os.path.isdir(src) and not os.path.isdir(dst):
+        os.rename(src, dst)
+        break
+
 BOT_TOKEN      = "8630079060:AAFc4_F_a4YPD_ZR9IYjCAlizsoLMHWFCj0"
 ATERNOS_LOGIN  = "Winten1"
 ATERNOS_PASSWORD = "102030405060708090"

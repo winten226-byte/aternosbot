@@ -1,0 +1,4 @@
+python-telegram-bot
+python-aternos
+lxml==4.9.2
+regex==2023.6.3

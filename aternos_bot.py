@@ -8,14 +8,6 @@ Aternos Telegram Bot
     py -3.11 aternos_bot.py
 """
 import logging
-from datetime import datetime, timedelta
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
-from telegram import ReplyKeyboardMarkup, KeyboardButton
-
-# ============================================================
-#  НАСТРОЙКИ
-# ============================================================
 
 import sys, os, site
 
@@ -26,6 +18,15 @@ for sp in site.getsitepackages():
     if os.path.isdir(src) and not os.path.isdir(dst):
         os.rename(src, dst)
         break
+        
+from datetime import datetime, timedelta
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
+from telegram import ReplyKeyboardMarkup, KeyboardButton
+
+# ============================================================
+#  НАСТРОЙКИ
+# ============================================================
 
 BOT_TOKEN      = "8630079060:AAFc4_F_a4YPD_ZR9IYjCAlizsoLMHWFCj0"
 ATERNOS_LOGIN  = "Winten1"

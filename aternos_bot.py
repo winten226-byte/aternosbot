@@ -66,7 +66,7 @@ def reply_keyboard():
 # ──────────────────────────────────────────────
 
 def _get_server():
-    from aternos import Client
+    from python_aternos import Client
     atclient = Client()
     atclient.login(ATERNOS_LOGIN, ATERNOS_PASSWORD)
     servers = atclient.account.list_servers()

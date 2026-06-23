@@ -1,6 +1,4 @@
 python-telegram-bot
-cloudscraper==1.2.71
-Js2Py==0.74
+python-aternos
 lxml==5.3.0
 regex==2024.11.6
-websockets==11.0.3
